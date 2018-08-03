@@ -23,25 +23,91 @@
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+     <plugin>
+   <groupId>org.sonatype.plugins</groupId>
+   <artifactId>nexus-staging-maven-plugin</artifactId>
+   <version>1.5.1</version>
+   <executions>
+      <execution>
+         <id>default-deploy</id>
+         <phase>deploy</phase>
+         <goals>
+            <goal>deploy</goal>
+         </goals>
+      </execution>
+   </executions>
+  <!-- <configuration>
+      <serverId>sonar</serverId>
+      <nexusUrl>https://sonar.gcnp.local/</nexusUrl>
+      <skipStaging>true</skipStaging>
+   </configuration>-->
+<configuration>
+      <serverId>nexus</serverId>
+      <nexusUrl>https://nexus.gcnp.local/</nexusUrl>
+      <skipStaging>true</skipStaging>
+   </configuration>
+</plugin>
+
     </plugins>
+  <!-- <extensions>
+            <extension>
+                <groupId>s3-wagon-private</groupId>
+                <artifactId>s3-wagon-private</artifactId>
+                <version>1.3.1</version>
+            </extension>
+        </extensions>-->
   </build>
-   <distributionManagement>
-        <repository>
+  <!-- <distributionManagement>
+       <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>https://nexus.gcnp.local/repository/SAMPLE_REL/</url>
+        </repository>
+       <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>https://nexus.gcnp.local/repository/SAMPLE_SNAP/</url>
+        </snapshotRepository>
+    </distributionManagement>-->
+  <distributionManagement>
+   <!--  <repository>
+            <id>sonar</id>
+            <name>Jenkins</name>
+            <url>https://sonar.gcnp.local</url>
+        </repository>-->
+       <repository>
             <id>Release</id>
             <name>SAMPLE_REL</name>
-            <url>http://nexus.gcnp.local/repository/SAMPLE_REL/</url>
+            <url>https://nexus.gcnp.local/repository/SAMPLE_REL/</url>
         </repository>
-        <snapshotRepository>
+     <snapshotRepository>
             <id>Snapshot</id>
             <name>SAMPLE_SNAP</name>
             <url>https://nexus.gcnp.local/repository/SAMPLE_SNAP/</url>
         </snapshotRepository>
     </distributionManagement>
+    <!--<distributionManagement>
+             <repository>
+            <id>Release</id>
+            <name>SAMPLE_REL</name>
+            <url>https://nexus.gcnp.local/repository/SAMPLE_REL/</url>
+        </repository>
+      <snapshotRepository>
+            <id>Snapshot</id>
+            <url>s3://nexus-kpmg-np-govcloud/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>-->
+
   <dependencies>
-  	<dependency>
-  		<groupId>javax.servlet</groupId>
-  		<artifactId>javax.servlet-api</artifactId>
-  		<version>3.0.1</version>
-  	</dependency>
+        <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.0.1</version>
+        </dependency>
   </dependencies>
 </project>
