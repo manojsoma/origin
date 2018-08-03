@@ -82,13 +82,13 @@
         </repository>-->
        <repository>
             <id>Release</id>
-            <name>Nexus_REL</name>
-            <url>https://nexus.gcnp.local/repository/Nexus_REL/</url>
+            <name>SAMPLE_REL</name>
+            <url>https://nexus.gcnp.local/repository/SAMPLE_REL/</url>
         </repository>
      <snapshotRepository>
             <id>Snapshot</id>
-            <name>Nexus_Snap</name>
-            <url>https://nexus.gcnp.local/repository/Nexus_Snap/</url>
+            <name>SAMPLE_SNAP</name>
+            <url>https://nexus.gcnp.local/repository/SAMPLE_SNAP/</url>
         </snapshotRepository>
     </distributionManagement>
     <!--<distributionManagement>
