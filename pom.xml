@@ -27,14 +27,14 @@
   </build>
    <distributionManagement>
         <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://10.0.1.13:8081/repository/SAMPLE_REL/</url>
+            <id>Release</id>
+            <name>SAMPLE_REL</name>
+            <url>http://nexus.gcnp.local/repository/SAMPLE_REL/</url>
         </repository>
         <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://10.0.1.13:8081/repository/SAMPLE_SNAP/</url>
+            <id>Snapshot</id>
+            <name>SAMPLE_SNAP</name>
+            <url>https://nexus.gcnp.local/repository/SAMPLE_SNAP/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>
