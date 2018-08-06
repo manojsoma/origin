@@ -76,12 +76,12 @@
     </distributionManagement>-->
   <distributionManagement>
           <repository>
-            <id>deployment</id>
+            <id>Release</id>
             <name>nexus-release</name>
             <url>https://nexus.gcnp.local/repository/nexus-release/</url>
         </repository>
      <snapshotRepository>
-            <id>deployment</id>
+            <id>Snapshot</id>
             <name>nexus-snapshot</name>
             <url>https://nexus.gcnp.local/repository/nexus-snapshot/</url>
         </snapshotRepository>
