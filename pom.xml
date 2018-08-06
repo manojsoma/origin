@@ -77,13 +77,13 @@
   <distributionManagement>
           <repository>
             <id>Release</id>
-            <name>Nexus_REL</name>
-            <url>https://nexus.gcnp.local/repository/Nexus_REL/</url>
+            <name>nexus-release</name>
+            <url>https://nexus.gcnp.local/repository/nexus-release/</url>
         </repository>
      <snapshotRepository>
             <id>Snapshot</id>
-            <name>Nexus_Snap</name>
-            <url>https://nexus.gcnp.local/repository/Nexus_Snap/</url>
+            <name>nexus-snapshot</name>
+            <url>https://nexus.gcnp.local/repository/nexus-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
     <!--<distributionManagement>
